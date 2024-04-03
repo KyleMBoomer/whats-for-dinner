@@ -7,16 +7,39 @@
     <title>🍔 What's For Dinner? 🥗</title>
   </head>
   <body>
-    <header> What's For Dinner? 
-      <button class="add-recipe-button"> Add A Recipe </button>
+    <header>
+      <nav>
+        <h1> What's For Dinner? </h1>
+        <button class="add-recipe-button"> ADD A RECIPE </button>
+      </nav>
     </header>
+  <main>
     <div class="parent-section">
       <section class="query-box">
-        <div class="side-dish-button"></div>
+        <h2> What are you looking for? </h2>
+        <ul class="side-dish-buttons">
+          <li>
+            <input type="radio" class="radio-buttons" id="side-dish-button" name="choice" value="side"> Side </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="main-dish-button" name="choice" value="main"> Main Dish </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="dessert-button" name="choice" value="dessert"> Dessert </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="entire-meal-button" name="choice" value="entire-meal"> Entire Meal </input>
+          </li>
+        </ul>
+        <button class="lets-cook"> Let's Cook! </button>
+      </section>
+      <section class="results-box">
+          <img class="cookpot-image" src="assets/cookpot.svg"/>
       </section>
     </div>
-    <img src="assets/burger-friends.jpg"/>
-    
+  </main>
+      <img src="assets/burger-friends.jpg"/>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
