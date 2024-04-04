@@ -26,10 +26,22 @@ var letsCookButton = document.querySelector('#lets-cook-button')
 var dishResult = document.querySelector('#result')
 var cookpot = document.querySelector('.cookpot-image') 
 
-sideDishButton.addEventListener('change', toggleView())
-mainDishButton.addEventListener('change', toggleView)
-dessertButton.addEventListener('change', toggleView)
-letsCookButton.addEventListener('click', getRandomDish)
+sideDishButton.addEventListener('change', function() {
+    toggleView(true, false)
+})
+
+mainDishButton.addEventListener('change', function() {
+    toggleView(true, false)
+})
+
+dessertButton.addEventListener('change', function() {
+    toggleView(true, false);
+})
+
+letsCookButton.addEventListener('click', function() {
+    toggleView(false, true);
+    getRandomDish();
+})
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -37,17 +49,17 @@ function getRandomIndex(array) {
 
 function getRandomDish() {
 if (sideDishButton.checked) {
-    dishResult.innerText = getRandomIndex(sideDishes)
+    dishResult.innerHTML = `<em>You should make:</em><br><span style="font-weight: bold; font-size: larger;">${sideDishes[getRandomIndex(sideDishes)]}</span>!`
 } else if (mainDishButton.checked) {
-    dishResult.innerText = getRandomIndex(mainDishes)
-} else if (dessertButton.checked) {
-    dishResult.innerText = getRandomIndex(desserts)
+    dishResult.innerHTML = `<em>You should make</em><br><span style="font-weight: bold; font-size: larger;">${mainDishes[getRandomIndex(mainDishes)]}</span>!`
+    } else if (dessertButton.checked) {
+    dishResult.innerHTML = `<em>You should make</em><br><span style="font-weight: bold; font-size: larger;">${desserts[getRandomIndex(desserts)]}</span>!`
   }
-  toggleView(true, false)
 }
 
-//param results :(t, t) = (hide cookpot, show dish); (t, f) = ()
-function toggleView(hide, show) {
-cookpot.classList.add('hidden', !show)
-dishResult.classList.remove(hide, 'hidden')
-} 
+
+function toggleView(showCookpot, showDishResult) {
+    cookpot.classList.toggle('hidden', !showCookpot)
+    dishResult.classList.toggle('hidden', !showDishResult)
+}
+
