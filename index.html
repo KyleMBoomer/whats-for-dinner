@@ -2,9 +2,44 @@
   <head>
     <link rel="stylesheet" href="./styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔 What's For Dinner? 🥗</title>
   </head>
   <body>
-    
+    <header>
+      <nav>
+        <h1> What's For Dinner? </h1>
+        <button class="add-recipe-button"> ADD A RECIPE </button>
+      </nav>
+    </header>
+  <main>
+    <div class="parent-section">
+      <section class="query-box">
+        <h2> What are you looking for?*</h2>
+        <ul class="side-dish-buttons">
+          <li>
+            <input type="radio" class="radio-buttons" id="side-dish-button" name="choice" value="side"> Side </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="main-dish-button" name="choice" value="main"> Main Dish </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="dessert-button" name="choice" value="dessert"> Dessert </input>
+          </li>
+          <li>
+            <input type="radio" class="radio-buttons" id="entire-meal-button" name="choice" value="entire-meal"> Entire Meal </input>
+          </li>
+          <button class="lets-cook"> LET'S COOK! </button>
+        </ul>
+      </section>
+      <section class="results-box">
+          <img class="cookpot-image" src="assets/cookpot.svg"/>
+      </section>
+    </div>
+  </main>
+      <img src="assets/burger-friends.jpg"/>
+    </div>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
