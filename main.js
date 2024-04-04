@@ -18,3 +18,36 @@ var desserts = [
     "Strawberry Shortcake", "Blueberry Cobbler", "Red Velvet Cupcakes", "Peach Crisp",
     "Carrot Cake", "Raspberry Cheesecake", "Pavlova", "Chocolate Mousse"
 ]
+
+var sideDishButton = document.querySelector('#side-dish-button')
+var mainDishButton = document.querySelector('#main-dish-button')
+var dessertButton = document.querySelector('#dessert-button')
+var letsCookButton = document.querySelector('#lets-cook-button')
+var dishResult = document.querySelector('#result')
+var cookpot = document.querySelector('.cookpot-image') 
+
+sideDishButton.addEventListener('change', toggleView())
+mainDishButton.addEventListener('change', toggleView)
+dessertButton.addEventListener('change', toggleView)
+letsCookButton.addEventListener('click', getRandomDish)
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+  }
+
+function getRandomDish() {
+if (sideDishButton.checked) {
+    dishResult.innerText = getRandomIndex(sideDishes)
+} else if (mainDishButton.checked) {
+    dishResult.innerText = getRandomIndex(mainDishes)
+} else if (dessertButton.checked) {
+    dishResult.innerText = getRandomIndex(desserts)
+  }
+  toggleView(true, false)
+}
+
+//param results :(t, t) = (hide cookpot, show dish); (t, f) = ()
+function toggleView(hide, show) {
+cookpot.classList.add('hidden', !show)
+dishResult.classList.remove(hide, 'hidden')
+} 
