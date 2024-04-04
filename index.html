@@ -16,7 +16,7 @@
   <main>
     <div class="parent-section">
       <section class="query-box">
-        <h2> What are you looking for?*</h2>
+        <h2> What are you looking for?<span class="red-dot">*</span></h2>
         <ul class="side-dish-buttons">
           <li>
             <input type="radio" class="radio-buttons" id="side-dish-button" name="choice" value="side"> Side </input>
@@ -30,11 +30,12 @@
           <li>
             <input type="radio" class="radio-buttons" id="entire-meal-button" name="choice" value="entire-meal"> Entire Meal </input>
           </li>
-          <button class="lets-cook"> LET'S COOK! </button>
+          <button class="lets-cook" id="lets-cook-button"> LET'S COOK! </button>
         </ul>
       </section>
       <section class="results-box">
           <img class="cookpot-image" src="assets/cookpot.svg"/>
+          <p id="result"></p>
       </section>
     </div>
   </main>
