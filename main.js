@@ -23,6 +23,7 @@ var sideDishButton = document.querySelector('#side-dish-button')
 var mainDishButton = document.querySelector('#main-dish-button')
 var dessertButton = document.querySelector('#dessert-button')
 var letsCookButton = document.querySelector('#lets-cook-button')
+var entireMealButton = document.querySelector('#entire-meal-button')
 var dishResult = document.querySelector('#result')
 var cookpot = document.querySelector('.cookpot-image') 
 
@@ -54,6 +55,8 @@ if (sideDishButton.checked) {
     dishResult.innerHTML = `<em>You should make</em><br><span style="font-weight: bold; font-size: larger;">${mainDishes[getRandomIndex(mainDishes)]}</span>!`
     } else if (dessertButton.checked) {
     dishResult.innerHTML = `<em>You should make</em><br><span style="font-weight: bold; font-size: larger;">${desserts[getRandomIndex(desserts)]}</span>!`
+  } else if (entireMealButton.checked) {
+    dishResult.innerHTML = `<em>You should make </em><br><span style="font-size: larger;">${mainDishes[getRandomIndex(mainDishes)]} with a side of ${sideDishes[getRandomIndex(sideDishes)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</span>`
   }
 }
 
