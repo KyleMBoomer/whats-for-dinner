@@ -10,6 +10,7 @@ I built an app that provides users with the ability to randomly generate suggest
 3. Open the HTML file in the repo and have fun creating food suggestions!
 
 ### Preview of App:
+<img width="1619" alt="Screenshot 2024-04-05 at 12 38 49 PM" src="https://github.com/KyleMBoomer/whats-for-dinner/assets/156006806/6c6a4aff-408a-4543-8bc9-8eac825c837f">
 
 
 ### Context:
