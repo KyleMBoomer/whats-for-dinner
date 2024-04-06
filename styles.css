@@ -78,7 +78,10 @@ ul li {
    border: 0;
    margin:1rem;
    cursor:pointer;
-   
+}
+
+.radio-buttons {
+    cursor:pointer;
 }
 
 .hidden {
